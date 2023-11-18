@@ -1,0 +1,10 @@
+// 10 functions used interview
+filter(searching)
+forEach (print)
+sorted (number, characters, employee)
+map(modifying)
+flatMap()
+reduce
+groupingBy()
+count()
+collect()

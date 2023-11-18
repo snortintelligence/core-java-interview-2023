@@ -1,0 +1,21 @@
+
+j
+java:S1192 "HDefine a constant instead of duplicating this literal "Finance" 3 times.(Œ“ Ôùÿÿÿÿ8üûØí»1
+n
+java:S1192"LDefine a constant instead of duplicating this literal "Engineering" 3 times.(©Èé´ûÿÿÿÿ8üûØí»1
+m
+java:S1192 "KDefine a constant instead of duplicating this literal "JavaScript" 3 times.(Œ“ Ôùÿÿÿÿ8üûØí»1
+d
+java:S1192$"GDefine a constant instead of duplicating this literal "Python" 3 times.(íŞœÏ8üûØí»1
+o
+java:S36558"RCall "minSalary.isPresent()" or "!minSalary.isEmpty()" before accessing the value.(À÷´¯8‰üØí»1
+o
+java:S36557"RCall "maxSalary.isPresent()" or "!maxSalary.isEmpty()" before accessing the value.(ş¨š¸8‰üØí»1
+]	java:S125"<This block of commented-out lines of code should be removed.(¼è÷ïøÿÿÿÿ8üØí»1
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(œã”ñÿÿÿÿÿ8’üØí»1
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(°×ëÃ8“üØí»1
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(©ù¢“8•üØí»1
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(ş¨š¸8–üØí»1
+U	java:S1068"9Replace this use of System.out or System.err by a logger.(À÷´¯8—üØí»1
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(ªŸØ¤ûÿÿÿÿ8ğñÙí»1
+Z	java:S106?"9Replace this use of System.out or System.err by a logger.(»¬Üäüÿÿÿÿ8„ñÚí»1

@@ -1,0 +1,71 @@
+In two's complement representation, which is commonly used for representing signed integers in binary, there are effectively two ways to represent a negative number:
+
+1. Bitwise Inversion (One's Complement):
+In this method, you invert (flip) all the bits in the binary representation of the positive number to obtain
+the binary representation of the corresponding negative number. For example, if you have 5 (binary 0101),
+its one's complement representation is -5 (binary 1010).
+
+2. Two's Complement: In this method, you invert all the bits and then add 1 to the one's complement representation
+to obtain the binary representation of the corresponding negative number.
+For example, if you have 5 (binary 0101), its two's complement representation is -5 (binary 1011).
+
+So, there are effectively two ways to represent negative numbers in binary using complement representation:
+one's complement and two's complement. Two's complement is the more commonly used method because it has some advantages over one's complement,
+such as simplifying arithmetic operations and ensuring that there is only one representation of zero.
+
+1's complement questions
+
+Q1. Convert the decimal number -7 to one's complement binary representation.
+0111 ->  7
+1000 -> -7
+
+-7 to one's complement binary representation is 1000.
+
+Q2. Find the one's complement of the binary number 1101101.
+1101101 =>  109
+0010010 => -109
+one's complement is 0010010.
+
+Q3. Add the binary numbers 1011 and 1101 in one's complement representation.
+
+Q4.
+
+Q5. Given the one's complement binary number 11110000, convert it to its decimal equivalent.
+8 digits => 7 -> 0 power
+240 => 1*2^7 + 1*2^6 + 1*2^5+ 1*2^4 + 0*2^3 + 0*2^2 + 0*2^1 + 0*2^0
+
+Q6. Convert the decimal number 15 to one's complement binary representation.
+note -: In one's complement representation, positive numbers are represented the same way as their standard binary representation.
+So, the one's complement binary representations for these numbers are: so 15 is ==> 1111
+
+You only apply the one's complement operation (bit inversion) to represent negative numbers in one's complement notation.
+
+
+
+Certainly! Here are 10 interview questions related to converting decimal numbers to binary representation, with varying numbers of bits:
+
+1. Convert the decimal number 10 to a 4-bit binary representation.
+1010
+
+2. Convert the decimal number 25 to an 8-bit binary representation.
+00011001
+
+3. Convert the decimal number 63 to a 6-bit binary representation.
+111111
+
+4. Convert the decimal number 100 to a 7-bit binary representation.
+1100100
+
+5. Convert the decimal number 7 to a 3-bit binary representation.
+111
+
+6. Convert the decimal number 50 to a 5-bit binary representation.
+
+7. Convert the decimal number 255 to an 8-bit binary representation.
+
+8. Convert the decimal number 15 to a 4-bit binary representation.
+
+9. Convert the decimal number 31 to a 6-bit binary representation.
+
+10. Convert the decimal number 3 to a 2-bit binary representation.
+

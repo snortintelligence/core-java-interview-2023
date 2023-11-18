@@ -1,0 +1,14 @@
+
+j
+java:S1192"HDefine a constant instead of duplicating this literal "Finance" 3 times.(Œ“ Ôùÿÿÿÿ8øçÿí»1
+n
+java:S1192"LDefine a constant instead of duplicating this literal "Engineering" 3 times.(©Èé´ûÿÿÿÿ8÷çÿí»1
+m
+java:S1192"KDefine a constant instead of duplicating this literal "JavaScript" 4 times.(Œ“ Ôùÿÿÿÿ8øçÿí»1
+d
+java:S1192"GDefine a constant instead of duplicating this literal "Python" 3 times.(íŞœÏ8øçÿí»1
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(é¤*8èÿí»1
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(ù¥†úÿÿÿÿ8èÿí»1
+U	java:S106)"9Replace this use of System.out or System.err by a logger.(è‘¥8Ç›‚î»1
+O
+java:S1128"-Remove this unused import 'java.util.Locale'.(åğ×±ûÿÿÿÿ8¾õ€î»1

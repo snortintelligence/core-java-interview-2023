@@ -1,0 +1,93 @@
+In linear algebra and mathematics, there are various types of matrices, each with its own unique characteristics and properties.
+
+Types of matrix
+1. A row matrix is a matrix with only one row and multiple columns. It is also known as a row vector.
+Example: M represents no of rows and N represents no of columns
+[1,2,3,4] = {M:1 x N:4} - 1 row 4 columns so it is called row matrix.
+
+2. Column Matrix: A column matrix is a matrix with only one column and multiple rows. It is also known as a column vector.
+Example:
+[1]
+[2]
+[3]
+
+3. Square Matrix: A square matrix is a matrix in which the number of rows is equal to the number of columns (n × n). Square matrices are commonly used in various mathematical operations.
+Example:
+[1 2 3]
+[4 5 6]
+[7 8 9]
+
+4. Zero Matrix: A zero matrix is a matrix in which all elements are zero.
+Example:
+[0 0 0]
+[0 0 0]
+[0 0 0]
+
+5. Diagonal Matrix: A diagonal matrix is a square matrix in which all elements outside the main diagonal (from top-left to bottom-right) are zero.
+Example:
+[1 0 0]
+[0 4 0]
+[0 0 7]
+
+6. Scalar Matrix (Identity Matrix): A scalar matrix, also known as an identity matrix, is a special type of diagonal matrix where all diagonal elements are equal to 1 or same.
+Example:
+[2 0 0]
+[0 2 0]
+[0 0 2]
+
+7. A unit matrix, also known as an identity matrix, is a square matrix in which all diagonal elements are equal to 1, and all off-diagonal elements are equal to 0. It is denoted by "I" or sometimes "E." The size of the identity matrix is usually indicated by a subscript, e.g., I₂ for a 2×2 identity matrix, I₃ for a 3×3 identity matrix, and so on.
+Here are examples of identity matrices of different sizes:
+
+a. **2×2 Identity Matrix (I₂):**
+
+   [1 0]
+   [0 1]
+
+
+b. **3×3 Identity Matrix (I₃):**
+
+   [1 0 0]
+   [0 1 0]
+   [0 0 1]
+
+
+b. **4×4 Identity Matrix (I₄):**
+   [1 0 0 0]
+   [0 1 0 0]
+   [0 0 1 0]
+   [0 0 0 1]
+
+
+8. Symmetric Matrix: A symmetric matrix is a square matrix that is equal to its transpose.
+Example:
+[1 2 3]
+[2 4 5]
+[3 5 6]
+
+
+9. Skew-Symmetric Matrix: A skew-symmetric matrix is a square matrix whose transpose is equal to its negative. its diagonal is equal to zero.
+Example:
+[0  -2  3]
+[2   0  5]
+[-3 -5  0]
+
+10. Hermitian Matrix (Complex Conjugate Transpose): In the context of complex numbers, a Hermitian matrix is a square matrix that is equal to its complex conjugate transpose.
+[1  2+3i]
+[2-3i 4  ]
+
+11. An upper triangular matrix is a square matrix in which all elements below the main diagonal (the diagonal from the top-left to the bottom-right) are zero. In other words, all non-zero elements are located on or above the main diagonal. Here are examples of upper triangular matrices:
+
+2x2 Upper Triangular Matrix:
+[1 2]
+[0 3]
+
+3x3 Upper Triangular Matrix:
+[4 5 6]
+[0 7 8]
+[0 0 9]
+
+4x4 Upper Triangular Matrix:
+[1 2 3 4]
+[0 5 6 7]
+[0 0 8 9]
+[0 0 0 0]
