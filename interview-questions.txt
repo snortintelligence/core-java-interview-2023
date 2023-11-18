@@ -1,0 +1,980 @@
+Q1. What is INNER Join and tell about JSON and XML
+JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. 
+It is widely used for representing structured data and exchanging information between a server and a web application
+
+
+Example : 1 
+{
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York",
+  "isStudent": false,
+  "skills": ["JavaScript", "React", "Node.js"]
+}
+
+XML : XML (eXtensible Markup Language):
+XML is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable. 
+It is widely used for data interchange between different systems.
+
+<person>
+  <name>John Doe</name>
+  <age>30</age>
+  <city>New York</city>
+  <isStudent>false</isStudent>
+  <skills>
+    <skill>JavaScript</skill>
+    <skill>React</skill>
+    <skill>Node.js</skill>
+  </skills>
+</person>
+
+
+3 rounds 1 coding test 2 technical interview 3 hr interview 1st round was amcat test with questions on aptitude , english , making errored code right etc. 2 questions from btech subjects in wnd round
+
+about dbms, sql, projects, resume and also a coding question
+
+Q2. Few oops concepts were asked then program for factorial and reversing a string were asked. 
+
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects, which are instances of classes, to structure and design software. 
+Java is an object-oriented Programming language, and it follows OOP concepts. 
+1. Class and Object, 2 Encapsulation, 3 Inheritance, 4. Polymorphism, 5. Abstraction and 5. Interface
+
+1. **Class and Object:**
+   - **Short Answer:** Class is a blueprint for creating objects, and objects are instances of classes.
+  
+2. **Encapsulation:**
+   - **Short Answer:** Encapsulation hides the internal details of an object and restricts access to its internal state.
+
+3. **Inheritance:**
+   - **Short Answer:** Inheritance allows a class (subclass) to inherit properties and behaviors from another class (superclass).
+
+4. **Polymorphism:**
+   - **Short Answer:** Polymorphism allows objects to be treated as instances of their parent class, enabling flexibility in method implementation.
+
+5. **Abstraction:**
+   - **Short Answer:** Abstraction simplifies complex systems by representing essential features and ignoring unnecessary details.
+   
+What are interfaces in oops and what is method overriding?
+6. **Interface:**
+   - **Short Answer:** Interface defines a contract for a class, specifying methods it must implement, promoting code flexibility and reuse.
+
+and 
+Http request types best practices for coding then what was the last thing that I learned.
+
+When working with HTTP requests in coding, it's essential to follow best practices to ensure a secure, efficient, and maintainable system. Here are some best practices for handling HTTP request types:
+
+1. **Use Appropriate HTTP Methods:**
+   - Choose the correct HTTP method (GET, POST, PUT, DELETE, etc.) based on the action you want to perform.
+   - Follow RESTful principles for designing APIs.
+
+2. **Limit the Use of Query Parameters in POST Requests:**
+   - Avoid using query parameters in POST requests for sensitive data.
+   - Use request bodies (e.g., JSON) to send data in a more secure and structured way.
+
+3. **Handle Errors Appropriately:**
+   - Use proper HTTP status codes to indicate success or failure.
+   - Include detailed error messages in the response body for debugging but avoid exposing sensitive information.
+
+4. **Implement Pagination for Large Data Sets:**
+   - When dealing with large data sets, implement pagination using query parameters (e.g., `page`, `pageSize`) to improve performance and response times.
+
+5. **Use HTTP Headers Effectively:**
+   - Leverage HTTP headers for metadata, content negotiation, and security (e.g., caching headers, content-type headers, security headers).
+   - Set appropriate caching headers to optimize performance.
+
+6. **Validate and Sanitize Input Data:**
+   - Always validate and sanitize input data to prevent security vulnerabilities such as SQL injection and cross-site scripting (XSS).
+
+7. **Implement Rate Limiting:**
+   - Protect your API from abuse by implementing rate limiting to control the number of requests a client can make within a specific timeframe.
+
+8. **Secure Sensitive Data:**
+   - Use HTTPS to encrypt data during transmission.
+   - Avoid exposing sensitive information, such as API keys, in URLs.
+
+9. **Use Asynchronous Processing for Time-Consuming Operations:**
+   - For time-consuming operations, consider asynchronous processing to avoid blocking the main thread and improve scalability.
+
+10. **Version Your APIs:**
+    - Include versioning in your API to ensure backward compatibility when making changes.
+    - Use a version identifier in the URL (e.g., `/v1/resource`).
+
+11. **Implement Cross-Origin Resource Sharing (CORS) Safely:**
+    - Use CORS headers to control which domains can access your resources.
+    - Be cautious about allowing broad access (`Access-Control-Allow-Origin: *`) and consider specifying specific domains.
+
+12. **Document Your APIs:**
+    - Provide comprehensive documentation for your APIs, including usage instructions, request/response examples, and error handling details.
+    - Use tools like Swagger or OpenAPI for automated documentation.
+
+13. **Testing:**
+    - Perform thorough testing of your API, including unit tests, integration tests, and security testing.
+    - Use tools like Postman or cURL for manual testing during development.
+
+By following these best practices, you can ensure that your code for handling HTTP requests is robust, secure, and aligned with industry standards.
+
+
+Interview was all about oops os cn and stack queue implementation
+
+merge sort reverse a number diamond pattern
+
+advanced SQL - question on partition by clause?
+
+ basic question of oops, SDLC, white box testing and black box testing and project discussion. 
+ 
+ Online assesment - verbal ability reasoning , 7 codes to debug in which if you debug 4 codes you will shortlisted for technical round 
+ 
+ explain your project in detailed. OOPS , dsa, dbms, cn
+ 
+ 
+
+How do you delete malicious records from Kafka topic ao that it doesn’t hamper the consumers?
+
+sliding window string, Largest Element in the Array Add Two Numbers As Linked Lists
+
+What do you mean by spring transactions?
+
+1: Introduction 2: Project Discussion and Questions 3: Merge Sort 4: Quick Sort vs Merge Sort 5: Check Loop in a Link List 
+
+Q3. Write a Program to Print only those alphabets which appear more than 1 times in a given string. 
+
+public class DuplicateAlphabetsWithStreams {
+    public static void main(String[] args) {
+        //Write a Program to Print only those alphabets which appear more than 1 times in a given string.
+        String inputString = "hello world";
+        Map<Character, Long> charFrequency = inputString.chars().filter(Character::isLetter)
+                .mapToObj(c->(char)c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(charFrequency);
+
+        charFrequency.entrySet().stream()
+                .filter(entry->entry.getValue()>1)
+                .map(Map.Entry::getKey)
+                .forEach(System.out::println);
+
+    }
+}
+
+Q4. Polymorphism & Virtual Functions 
+Polymorphism in Java allows objects of different classes to be treated as objects of a common base class. 
+This is achieved through method overriding and interfaces. There are two types of polymorphism in Java:
+
+Compile-time Polymorphism (Static Binding):
+This is achieved through method overloading.
+Method overloading allows a class to have multiple methods with the same name but different parameters.
+class Example {
+    void display(int a) {
+        System.out.println("Method with one parameter: " + a);
+    }
+
+    void display(int a, int b) {
+        System.out.println("Method with two parameters: " + a + ", " + b);
+    }
+}
+
+Runtime Polymorphism (Dynamic Binding):
+
+This is achieved through method overriding and interfaces.
+Method overriding allows a subclass to provide a specific implementation of a method that is already provided by its superclass.
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+
+
+8: Puzzle - Given 9 balls, 8 balls of y weights, 1 ball of x weight, where x>y, What is the least number of iterations to separate the x weight ball. 
+Give a generalize algorithm.
+
+Where you expect to see youself in 5 years and also the field of interest in IT.
+
+Oops , data structure, SQL, multi threading
+
+Most difficult situations you faced
+
+Coding part: 1. reverse a String. 2. print the max number from an array.
+
+Q. Swap two strings with no additional variables
+public class StringSwapping {
+    public static void main(String[] args) {
+
+        String a = "Hello India";
+        String b = "World";
+
+        System.out.println("Before swapping: ");
+        System.out.println("a: " + a);
+        System.out.println("b: " + b);
+
+        // Swapping strings without additional variables using substring
+        a = a + b;
+        System.out.println("a = "+a);
+        b = a.substring(0, a.length() - b.length());
+
+        a = a.substring(b.length());
+
+        System.out.println("After swapping: ");
+        System.out.println("a: " + a);
+        System.out.println("b: " + b);
+
+    }
+}
+
+
+Why are you interested in this position?
+
+Design patterns in java explanations
+Design patterns are reusable solutions to common problems encountered in software design. They provide a way to create elegant, maintainable, and scalable software by promoting best practices and proven design principles. Here are some key design patterns in Java along with brief explanations:
+
+1. **Singleton Pattern:**
+   - **Intent:** Ensures a class has only one instance and provides a global point of access to it.
+   - **Example:** Database connections, Logger classes.
+
+2. **Factory Method Pattern:**
+   - **Intent:** Defines an interface for creating an object, but leaves the choice of its type to the subclasses, creating an instance of several derived classes.
+   - **Example:** `Calendar` class in Java.
+
+3. **Abstract Factory Pattern:**
+   - **Intent:** Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+   - **Example:** GUI libraries providing different themes for buttons, windows, etc.
+
+4. **Builder Pattern:**
+   - **Intent:** Separates the construction of a complex object from its representation, so that the same construction process can create different representations.
+   - **Example:** `StringBuilder` class in Java.
+
+5. **Prototype Pattern:**
+   - **Intent:** Creates new objects by copying an existing object, known as the prototype.
+   - **Example:** Object cloning in Java.
+
+6. **Adapter Pattern:**
+   - **Intent:** Allows the interface of an existing class to be used as another interface.
+   - **Example:** `ArrayAdapter` in Android, converting data for use in `ListView`.
+
+7. **Decorator Pattern:**
+   - **Intent:** Attaches additional responsibilities to an object dynamically.
+   - **Example:** `InputStream` and `OutputStream` classes in Java I/O.
+
+8. **Observer Pattern:**
+   - **Intent:** Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+   - **Example:** Event handling in GUI frameworks.
+
+9. **Strategy Pattern:**
+   - **Intent:** Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+   - **Example:** Sorting algorithms in Java (`Comparator` interface).
+
+10. **Command Pattern:**
+    - **Intent:** Encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and logging of the parameters.
+    - **Example:** GUI undo/redo functionality.
+
+These design patterns provide solutions to common design problems, promote code reusability, and help in building scalable and maintainable software systems.
+
+
+
+Logic puzzles were usually very basic stuff like: person goes south 50 miles, east 50 miles, north 50 miles, 
+and east 30 miles. How far and in what direction from the start did they stop?
+
+
+
+
+Implement selection sort. Explain Object Oriented Programming.
+public class SelectionSort {
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            // Assume the current index is the minimum
+            int minIndex = i;
+
+            // Find the index of the minimum element in the unsorted part of the array
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Swap the found minimum element with the first element
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] unsortedArray = {64, 25, 12, 22, 11};
+        
+        System.out.println("Unsorted Array:");
+        printArray(unsortedArray);
+
+        selectionSort(unsortedArray);
+
+        System.out.println("Sorted Array:");
+        printArray(unsortedArray);
+    }
+
+    public static void printArray(int[] arr) {
+        for (int value : arr) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+Q. Explain the Spring / Spring Boot architecture and how it handles the requests.
+
+Sure, let's discuss the architectures of Node.js, Spring, and Spring Boot, and how they handle requests:
+
+### Node.js Architecture:
+
+Node.js is a JavaScript runtime built on the V8 JavaScript engine. It follows an event-driven, non-blocking I/O model, making it 
+well-suited for scalable network applications.
+
+1. **Event-Driven:**
+   - Node.js operates on an event-driven architecture where asynchronous events trigger the execution of callback functions.
+   - It uses an event loop to handle multiple events concurrently without creating separate threads for each request.
+
+2. **Single-Threaded:**
+   - Node.js runs on a single-threaded event loop. It handles concurrent connections by using callbacks and non-blocking I/O operations.
+   - While handling I/O operations, Node.js can continue processing other events, making it efficient for handling a large number of connections.
+
+3. **Non-Blocking I/O:**
+   - Node.js uses non-blocking I/O operations, allowing it to handle multiple requests simultaneously without waiting for each operation to complete.
+
+4. **Modules:**
+   - Node.js has a module system that allows developers to organize code into reusable and maintainable components.
+
+### Spring Framework Architecture:
+
+The Spring Framework is a comprehensive framework for Java development, providing support for various aspects of enterprise application development.
+
+1. **Inversion of Control (IoC):**
+   - The core principle of Spring is Inversion of Control. It manages the objects of your application and injects the dependencies.
+
+2. **Aspect-Oriented Programming (AOP):**
+   - Spring uses AOP to separate cross-cutting concerns like logging, security, and transactions from the business logic.
+
+3. **Modules:**
+   - Spring is modular, providing various modules for different functionalities such as data access, transaction management, security, etc.
+
+4. **Dependency Injection (DI):**
+   - Spring promotes Dependency Injection, where the dependencies of a class are injected by the container. This makes testing and maintenance easier.
+
+5. **Spring MVC:**
+   - For web applications, Spring provides the Spring MVC framework, which follows the Model-View-Controller pattern.
+
+### Spring Boot Architecture:
+
+Spring Boot is a convention-over-configuration, opinionated framework built on top of the Spring framework, designed to simplify the process 
+of building production-ready applications.
+
+1. **Opinionated Defaults:**
+   - Spring Boot provides defaults for configurations and settings, reducing the need for extensive configuration files.
+
+2. **Embedded Servers:**
+   - Spring Boot includes embedded servers (like Tomcat, Jetty, or Undertow), allowing developers to package applications as standalone JAR files.
+
+3. **Spring Boot Starters:**
+   - Starters are pre-configured templates that help developers bootstrap Spring applications quickly. They include dependencies, configurations, and build settings.
+
+4. **Auto-Configuration:**
+   - Spring Boot's auto-configuration feature automatically configures the application based on the dependencies present in the classpath.
+
+5. **Spring Boot Actuator:**
+   - Actuator provides production-ready features like monitoring, metrics, health checks, and application management.
+
+### Handling Requests:
+
+1. **Node.js:**
+   - Node.js uses an event-driven, non-blocking I/O model to handle requests. It processes requests asynchronously using the event loop and callbacks.
+
+2. **Spring Framework:**
+   - In a Spring application, the DispatcherServlet (part of the Spring MVC framework) handles incoming HTTP requests.
+   - The DispatcherServlet routes requests to appropriate controllers based on URL mappings.
+
+3. **Spring Boot:**
+   - Spring Boot applications have a main class with an embedded server (like Tomcat) that handles HTTP requests.
+   - Spring Boot automatically configures the web application based on dependencies and annotations.
+
+Both Spring and Spring Boot follow the principles of the Spring Framework, emphasizing modularity, 
+dependency injection, and providing features for building scalable and maintainable enterprise applications. 
+Each framework has its own strengths and use cases, and the choice often depends on the specific requirements of the project.
+
+who is your role model and why?.
+
+Optimal Strategy for game Longest Common Subsequence. Longest Increasing Subsequence.
+
+Fibonacci Series, Polymorphism , Related To Projects
+
+Angular Conceptual Questions based on directives, Components
+
+what do you like to do in your leisure time
+"I enjoy reading fiction and exploring new hiking trails to unwind and recharge."
+
+Q. Pillars of oops. Data Abstraction. Questions on project.
+The four pillars of Object-Oriented Programming (OOP) are:
+
+1. **Encapsulation:**
+   - **Definition:** Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit known as a class.
+   - **Purpose:** It helps in hiding the internal details of an object and restricting access to the internal state. Only the necessary operations are exposed.
+
+2. **Abstraction:**
+   - **Definition:** Abstraction is the process of simplifying complex systems by modeling classes based on the essential properties and behaviors they share.
+   - **Purpose:** It allows developers to focus on the relevant features of an object while ignoring the irrelevant details. Abstraction provides a clear separation between what an object does and how it achieves it.
+
+3. **Inheritance:**
+   - **Definition:** Inheritance is a mechanism that allows a new class (subclass or derived class) to inherit properties and behaviors of an existing class (superclass or base class).
+   - **Purpose:** It promotes code reuse, extensibility, and the creation of a hierarchy of classes. Subclasses can inherit common attributes and behaviors from their superclass and can also introduce their own specific features.
+
+4. **Polymorphism:**
+   - **Definition:** Polymorphism allows objects of different types to be treated as objects of a common type. It can take place at compile time (compile-time polymorphism) or runtime (runtime polymorphism).
+   - **Purpose:**
+     - Compile-time polymorphism is achieved through method overloading, where multiple methods with the same name but different parameters coexist in the same class.
+     - Runtime polymorphism is achieved through method overriding, where a subclass provides a specific implementation of a method that is already defined in its superclass.
+
+These four pillars collectively form the foundation of object-oriented programming, providing a set of principles that guide the design and implementation of software systems. OOP promotes code organization, reusability, and the development of modular and maintainable applications.
+
+
+
+Q. What I knew about OOPS Concept and to explain Abstraction, 
+How would I implement Abstraction on a module called ‘invoice’, 
+How would I reuse the code in my module ‘invoice’.
+
+
+Q. What data normalization was, Explain the different forms of normalization.
+
+Data normalization is a database design technique used to organize and structure data in a relational database to eliminate redundancy and dependency, ensuring data integrity and minimizing the risk of anomalies during updates, inserts, and deletes. The process involves breaking down large tables into smaller, related tables and establishing relationships between them.
+
+### Different Forms of Normalization:
+
+1. **First Normal Form (1NF):**
+   - Ensures that each column contains only atomic (indivisible) values, and there are no repeating groups or arrays.
+   - Example: Splitting a column containing multiple phone numbers into separate rows.
+
+2. **Second Normal Form (2NF):**
+   - Builds on 1NF by eliminating partial dependencies.
+   - All non-prime attributes (attributes not part of the primary key) are fully functionally dependent on the entire primary key.
+   - Example: A composite primary key with attributes where each non-key attribute is dependent on the entire key.
+
+3. **Third Normal Form (3NF):**
+   - Builds on 2NF by eliminating transitive dependencies.
+   - All non-prime attributes are functionally dependent only on the primary key, not on other non-prime attributes.
+   - Example: If A → B and B → C, then A → C should not exist.
+
+4. **Boyce-Codd Normal Form (BCNF):**
+   - A more stringent version of 3NF, ensuring that for every non-trivial functional dependency, the determinant is a superkey.
+   - Example: Ensuring that every non-prime attribute is dependent on the entire superkey.
+
+5. **Fourth Normal Form (4NF):**
+   - Addresses multi-valued dependencies.
+   - Ensures that there are no non-trivial multi-valued dependencies between attributes.
+   - Example: Separating multi-valued attributes into separate tables.
+
+6. **Fifth Normal Form (5NF):**
+   - Deals with cases where a table contains two or more independent multi-valued facts about an entity.
+   - Example: Splitting a table with multiple multi-valued attributes into separate tables.
+
+Normalization helps maintain data consistency, reduces redundancy, and improves database efficiency. The choice of normalization level depends on the specific requirements of the application and the balance between normalization and performance considerations.
+
+ 
+Q. 
+SQL Joins, To write a query to display an employee’s name and designation from two tables – Employee Personal Info 
+(with employee id, name, address, phone no., etc) and Employee Info (with employee id, department, designation, salary, etc.), 
+
+-- Create EmployeePersonalInfo table
+CREATE TABLE EmployeePersonalInfo (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    address VARCHAR(255),
+    phone_no VARCHAR(15)
+);
+
+-- Insert sample data into EmployeePersonalInfo table
+INSERT INTO EmployeePersonalInfo (employee_id, name, address, phone_no)
+VALUES
+    (1, 'John Doe', '123 Main St', '555-1234'),
+    (2, 'Jane Smith', '456 Oak St', '555-5678'),
+    (3, 'Bob Johnson', '789 Pine St', '555-9012'),
+    (4, 'Smith', '789 Pine St', '333-9012');
+    
+    -- Create EmployeeInfo table
+CREATE TABLE EmployeeInfo (
+    employee_id INT PRIMARY KEY,
+    department VARCHAR(255),
+    designation VARCHAR(255),
+    salary DECIMAL(10 , 2 )
+);
+
+-- Insert sample data into EmployeeInfo table
+INSERT INTO EmployeeInfo (employee_id, department, designation, salary)
+VALUES
+    (1, 'IT', 'Software Engineer', 80000.00),
+    (2, 'HR', 'HR Manager', 90000.00),
+    (3, 'Sales', 'Sales Representative', 75000.00);
+    
+    SELECT 
+    EP.employee_id,
+    EP.name AS employee_name,
+    EI.designation
+FROM 
+    EmployeePersonalInfo EP
+INNER JOIN 
+    EmployeeInfo EI ON EP.employee_id = EI.employee_id;
+
+
+Q. What is referential integrity
+Referential integrity is a concept in relational database management systems (RDBMS) that ensures the consistency and accuracy of relationships between tables. It is based on the idea of maintaining referential relationships between tables through the use of foreign keys and primary keys.
+
+Here are the key aspects of referential integrity:
+
+1. **Foreign Key-Primary Key Relationship:**
+   - Referential integrity involves maintaining the relationships between tables using foreign keys and primary keys.
+   - A foreign key in one table refers to the primary key of another table. This creates a link between the two tables.
+
+2. **Consistency of Relationships:**
+   - Referential integrity ensures that relationships between tables remain consistent. If a foreign key in one table refers to a primary key in another, the referenced record in the other table must exist.
+
+3. **Enforcement of Relationships:**
+   - The database management system enforces referential integrity by preventing actions that could compromise the consistency of relationships. For example, it prevents the insertion of a record with a foreign key that does not correspond to any primary key.
+
+4. **CASCADE Options:**
+   - Referential integrity often supports CASCADE options, such as CASCADE DELETE and CASCADE UPDATE.
+   - CASCADE DELETE: If a record in the referenced (parent) table is deleted, the corresponding records in the referencing (child) table are also automatically deleted.
+   - CASCADE UPDATE: If the primary key value in the referenced table is updated, the corresponding foreign key values in the referencing table are also updated.
+
+5. **NO ACTION or SET NULL Options:**
+   - NO ACTION: Prevents the update or deletion of a referenced record if it is associated with any foreign key.
+   - SET NULL: Sets the foreign key values to NULL if the referenced record is updated or deleted.
+
+Maintaining referential integrity is crucial for ensuring the accuracy and reliability of data in relational databases. It helps prevent orphaned records, where a foreign key references a non-existent primary key, and it ensures that relationships between tables accurately represent the associations between entities in the real world.
+
+
+Q. Which sorting algorithm is better, Merge Sort or Quick Sort, and 
+
+How would I find the route which would 
+take me from one place (say, ‘A’) to another (say, ‘B’) in the minimum possible time if I already had data from the last 10 years about 
+the number of cars that ran on the various possible routes (from ‘A’ to ‘B’) on a daily basis?
+
+
+What are Cookies?
+
+Cookies are small pieces of data stored on a user's device by a web browser while browsing a website. 
+They are used to remember stateful information, track user activity, and enhance user experience.
+
+What is SQL?
+SQL (Structured Query Language) is a domain-specific language used for managing and manipulating relational databases. 
+It allows users to perform tasks such as querying data, updating data, inserting data, and deleting data from a database.
+
+Q. Explain the view in SQL and joins ?
+
+ The joins are used to combine data from multiple tables based on specified conditions, providing flexibility in querying and analyzing related data.
+
+create table department
+(
+dept_id INT PRIMARY KEY,
+dept_name VARCHAR(255)
+);
+
+-- Insert some data into 'department' table
+INSERT INTO department (dept_id, dept_name) VALUES
+(1, 'HR'),
+(2, 'IT'),
+(3, 'Finance');
+
+CREATE TABLE employee (
+emp_id INT PRIMARY KEY,
+emp_name VARCHAR(200),
+emp_salary DECIMAL(10,2),
+dept_id INT,
+FOREIGN KEY(dept_id) REFERENCES department(dept_id)
+);
+
+-- Insert some data into 'employee' table
+INSERT INTO employee (emp_id, emp_name, emp_salary, dept_id) VALUES
+(1, 'John Doe', 50000.00, 1),
+(2, 'Jane Smith', 60000.00, 2),
+(3, 'Bob Johnson', 75000.00, 1),
+(4, 'Alice Williams', 80000.00, 3);
+
+1. INNER JOIN:
+Returns rows when there is a match in both tables based on the specified condition.
+
+-- Create a view with INNER JOIN
+create view employee_department_inner_join AS
+select e.emp_id, e.emp_name, d.dept_name, e.emp_salary
+from employee e
+inner join department d on e.dept_id = d.dept_id; 
+
+2. LEFT JOIN (or LEFT OUTER JOIN):
+Returns all rows from the left table and the matching rows from the right table. 
+Non-matching rows from the right table contain NULL values.
+
+create view employee_department_left_join as
+select e.emp_id, e.emp_name, d.dept_name, e.emp_salary
+from employee e
+left join department d on e.dept_id = d.dept_id; 
+
+3. RIGHT JOIN (or RIGHT OUTER JOIN):
+Returns all rows from the right table and the matching rows from the left table. 
+Non-matching rows from the left table contain NULL values.
+
+create view employee_department_right_join as
+select e.emp_id, e.emp_name, d.dept_name, e.emp_salary
+from employee e
+right join department d on e.dept_id = d.dept_id; 
+
+4. FULL JOIN (or FULL OUTER JOIN):
+Simulated in MySQL using a combination of LEFT JOIN, RIGHT JOIN, and UNION. 
+Returns all rows when there is a match in either table. Non-matching rows in each table contain NULL values.
+
+create view employee_department_full_join as
+select e.emp_id, e.emp_name, d.dept_name, e.emp_salary
+from employee e
+left join department d on e.dept_id = d.dept_id
+union
+select e.emp_id, e.emp_name, d.dept_name, e.emp_salary
+from employee e
+right join department d on e.dept_id = d.dept_id;
+----------------------------------------------------------------------------------------------------------------------
+
+Immutable class, internal working of hash map
+### Immutable Class:
+
+An immutable class in Java is a class whose instances cannot be modified after creation. Once the object is created, its state remains constant throughout its lifetime. Here are the key characteristics of an immutable class:
+
+1. **Final Class:** An immutable class is often declared as `final` to prevent inheritance.
+
+2. **Final Fields:** The class should have all its fields marked as `final` to ensure that they cannot be modified.
+
+3. **No Setter Methods:** There should be no setter methods that can modify the state of the object.
+
+4. **Constructor Initialization:** The object's state is typically set through a constructor during object creation.
+
+5. **No Mutable Objects:** If the class contains references to mutable objects, those objects should also be immutable or handled in a way that maintains immutability.
+
+Example of an immutable class:
+
+```java
+public final class ImmutableClass {
+    private final int value;
+
+    public ImmutableClass(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}
+```
+
+### Internal Working of HashMap:
+
+A `HashMap` in Java is a data structure that implements the `Map` interface, providing key-value pairs. Here's a high-level overview of the internal working of a `HashMap`:
+
+1. **Hashing:** When you put a key-value pair into a `HashMap`, the key is hashed to determine the index where the value will be stored.
+
+2. **Bucket Array:** Internally, a `HashMap` maintains an array of "buckets" (or bins), and each bucket can hold multiple key-value pairs. The hashed key determines the bucket index.
+
+3. **Collision Handling:** If two keys hash to the same index (collision), the `HashMap` uses a linked list (or a balanced tree in Java 8 and later versions) to store multiple key-value pairs in the same bucket.
+
+4. **Load Factor:** The load factor determines when the `HashMap` should resize itself. If the number of entries exceeds a certain threshold, the `HashMap` is resized to ensure efficient performance.
+
+5. **Performance:** The average time complexity for basic operations (get, put) is O(1) under normal circumstances. However, in the case of collisions, the performance may degrade to O(n), where n is the number of entries in a single bucket.
+
+Example usage of `HashMap`:
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> hashMap = new HashMap<>();
+
+        // Putting key-value pairs
+        hashMap.put("One", 1);
+        hashMap.put("Two", 2);
+        hashMap.put("Three", 3);
+
+        // Getting a value
+        int value = hashMap.get("Two");
+        System.out.println("Value for key 'Two': " + value);
+    }
+}
+```
+
+
+Q. OOPS concepts, pointers, frequency of each character in a string and to remove duplicates from string
+
+### OOPS Concepts:
+
+Object-Oriented Programming (OOP) is a paradigm that organizes software design around objects, which can encapsulate data and behavior. Key concepts include:
+
+1. **Encapsulation:** Bundling data and methods that operate on the data within a single unit (class).
+
+2. **Inheritance:** A mechanism where a new class inherits properties and behaviors from an existing class.
+
+3. **Polymorphism:** The ability of a class to take on multiple forms; it can refer to different classes through a common interface.
+
+4. **Abstraction:** The concept of simplifying complex systems by modeling classes based on the essential properties and behaviors they share.
+
+### Pointers (in Java):
+
+Java is a language that doesn't directly use pointers like languages such as C or C++. Java manages memory automatically using garbage collection, eliminating the need for explicit pointer manipulation.
+
+### Frequency of Each Character in a String (Java Example):
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public class CharacterFrequency {
+    public static void main(String[] args) {
+        String str = "programming";
+
+        // Using a Map to store character frequencies
+        Map<Character, Integer> charFrequency = new HashMap<>();
+
+        // Counting character frequencies
+        for (char ch : str.toCharArray()) {
+            charFrequency.put(ch, charFrequency.getOrDefault(ch, 0) + 1);
+        }
+
+        // Displaying character frequencies
+        for (Map.Entry<Character, Integer> entry : charFrequency.entrySet()) {
+            System.out.println("Character: " + entry.getKey() + ", Frequency: " + entry.getValue());
+        }
+    }
+}
+```
+
+### Remove Duplicates from a String (Java Example):
+
+```java
+import java.util.LinkedHashSet;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "programming";
+
+        // Using LinkedHashSet to remove duplicates while maintaining order
+        LinkedHashSet<Character> uniqueChars = new LinkedHashSet<>();
+
+        // Adding characters to the set
+        for (char ch : str.toCharArray()) {
+            uniqueChars.add(ch);
+        }
+
+        // Constructing the result string without duplicates
+        StringBuilder result = new StringBuilder();
+        for (char ch : uniqueChars) {
+            result.append(ch);
+        }
+
+        System.out.println("Original String: " + str);
+        System.out.println("String after removing duplicates: " + result.toString());
+    }
+}
+```
+
+These examples demonstrate how to find the frequency of each character in a string and how to remove duplicates from a string in Java.
+
+
+1. Sealed Classes in JAVA
+2. Project reactor
+3. RandomAccess Interface
+4. getOne() vs findById() in hibernate
+5. Concurrency strategy in 2nd level cache in hibernate
+6. LocaleResolver in spring boot
+Sure, let's go through each of these topics:
+
+### 2. Project Reactor:
+
+Project Reactor is an open-source reactive programming library for building non-blocking applications on the Java Virtual Machine (JVM). It is part of the Spring Framework and provides support for the Reactive Streams specification.
+
+Reactive programming is a programming paradigm that deals with asynchronous data streams and the propagation of changes. Project Reactor introduces two main types: Flux and Mono.
+
+- **Flux:** Represents a stream of 0 to N items. It can emit data asynchronously and supports backpressure, which allows the consumer to control the rate of data flow.
+
+- **Mono:** Represents a stream of 0 or 1 item. It is similar to Flux but specifically designed for scenarios where you expect zero or one result, such as a single value or an empty value.
+
+Project Reactor provides a set of operators that you can use to transform, combine, and process these reactive streams. It's widely used in Spring WebFlux for building reactive web applications.
+
+### 3. RandomAccess Interface:
+
+`RandomAccess` is a marker interface in Java that indicates that instances of the implementing class can be accessed randomly. Classes that implement this interface provide efficient random access to their elements, typically through constant time access to any element, regardless of its position.
+
+One notable use of `RandomAccess` is in the `Collections.binarySearch` method. If the list being searched implements `RandomAccess`, it will use an optimized algorithm for indexing directly into the list, resulting in faster search times.
+
+### 4. getOne() vs findById() in Hibernate:
+
+In Hibernate, both `getOne()` and `findById()` methods are used to retrieve entities by their primary key, but there are some differences:
+
+- **`getOne()` method:**
+  - It is part of the `JpaRepository` interface in Spring Data JPA.
+  - It returns a reference (a proxy) to the entity. The actual database query is executed when a method is called on the returned proxy.
+  - It might throw an `EntityNotFoundException` at the time of access if the entity is not found.
+
+- **`findById()` method:**
+  - It is also part of the `JpaRepository` interface.
+  - It returns an `Optional` containing the entity or an empty `Optional` if the entity is not found.
+  - It triggers the database query immediately upon calling the method.
+
+The choice between them depends on your use case. If you need a reference to the entity without hitting the database immediately, you might use `getOne()`. If you want to check for existence or need the actual entity, you might prefer `findById()`.
+
+### 5. Concurrency strategy in 2nd level cache in Hibernate:
+
+In Hibernate, the second-level cache is a cache shared across sessions. It can significantly improve performance by reducing the number of database queries needed to load an entity. One important consideration in the second-level cache is the concurrency strategy, which defines how the cached data is handled in a multi-threaded environment.
+
+Common concurrency strategies include:
+
+- **READ_ONLY:** Suitable for entities that never change. Cached data is never updated; it is assumed that the database is the source of truth.
+
+- **NONSTRICT_READ_WRITE:** Allows changes to the cached data but uses locks to ensure that only one thread can update the cache at a time. Other threads can read the old data until the update is complete.
+
+- **READ_WRITE:** Similar to NONSTRICT_READ_WRITE but uses a more aggressive locking strategy. It can improve consistency but may impact performance.
+
+- **TRANSACTIONAL:** Suitable for applications with a high degree of write operations. It maintains cache consistency within a transaction.
+
+The choice of concurrency strategy depends on the specific requirements of your application.
+
+### 6. LocaleResolver in Spring Boot:
+
+In Spring Boot, a `LocaleResolver` is responsible for resolving the user's locale. It helps Spring to determine which locale-specific configurations, messages, and formats should be applied. The `LocaleResolver` interface is part of the Spring Framework.
+
+There are different implementations available, and the choice depends on your application requirements. Some common implementations include:
+
+- **`AcceptHeaderLocaleResolver`:** This resolver uses the `Accept-Language` header of the HTTP request to determine the user's locale.
+
+- **`SessionLocaleResolver`:** It stores the locale information in the user's session. The user's locale is determined by checking the session first, and if not found, it falls back to a default locale.
+
+- **`CookieLocaleResolver`:** Similar to `SessionLocaleResolver`, but it stores the locale information in a cookie.
+
+- **`FixedLocaleResolver`:** Always uses a fixed, configured locale.
+
+To use a specific `LocaleResolver` in your Spring Boot application, you typically configure it in your application's configuration class or properties file. For example:
+
+```java
+@Configuration
+public class WebConfig extends WebMvcConfigurerAdapter {
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        SessionLocaleResolver resolver = new SessionLocaleResolver();
+        resolver.setDefaultLocale(Locale.US);
+        return resolver;
+    }
+
+    // Other configurations...
+}
+```
+
+This example configures a `SessionLocaleResolver` with a default locale of `Locale.US`.
+
+
+Q. Linked List Cycle detection and removal.
+
+oops concepts,palindrome number program,graphs,trees,queue,linked lists
+
+new malloc
+
+Also be prepared for questions related to Software Testing and Quality Assurance.
+
+He asked me to code trees and all the oops concepts
+
+Q. why should we hire you when the college students have much more skills than you .
+for your experience ,we can't give you that much salary.
+
+When responding to an HR question like "Why should we hire you when college students have more skills, and we can't offer you a higher salary based on your experience?" it's important to address the concerns while highlighting your strengths. Here's a sample response:
+
+---
+
+Dear [HR Representative's Name],
+
+Thank you for bringing up these important points. While I understand that college students may possess certain technical skills, I believe my experience brings unique value to the table. Here are a few reasons why I believe I would be an asset to the team:
+
+1. **Practical Experience:** My years of experience in the field have equipped me with practical knowledge and insights that may not be covered in a classroom setting. This experience allows me to approach challenges with a comprehensive understanding of industry best practices.
+
+2. **Adaptability:** Having worked in diverse environments, I've developed strong adaptability and problem-solving skills. I am confident in my ability to quickly integrate into your team and contribute effectively to projects.
+
+3. **Mentorship and Leadership:** Over the years, I've had the opportunity to mentor and lead teams, fostering a collaborative and results-driven work culture. I believe these leadership qualities can positively impact the dynamics of your team.
+
+Regarding the salary, while I appreciate the budget constraints, I am open to discussing a compensation package that reflects the value I bring to the organization. I am confident that my skills and experience can contribute significantly to the success of the team, and I am eager to be a part of [Company Name].
+
+I would be happy to discuss this further in an interview and explore how my background aligns with the needs of the company.
+
+Thank you for considering my application. I look forward to the possibility of contributing to the success of [Company Name].
+
+Sincerely,
+[Your Full Name]
+
+---
+
+This response emphasizes your unique strengths, your ability to adapt, and your willingness to discuss compensation. It's important to convey confidence and a positive attitude while addressing the concerns raised by the HR representative.
+
+After clearing the technical round they asked me to solve 3 and 5 litre water Jug to measure 4 litres puzzle in one of the interaction
+
+OOPS concepts, Check Palindrome, Check Prime No in optimized manner, Projects and Guesstimates.
+
+code for reversing a string
+Hashmap vs hashtable and multithreading
+sort the employee data using comparator
+
+
+Q. Describe difficult experiences with clients
+Discussing difficult experiences with clients in a face-to-face interview with HR requires a delicate approach. It's important to focus on the challenges faced, the solutions implemented, and the positive outcomes or lessons learned. Here's a structured way to communicate such experiences:
+
+1. **Context Setting:**
+   - Briefly introduce the project and the client you were working with.
+   - Provide a high-level overview of the goals and expectations.
+
+2. **Challenge Identification:**
+   - Clearly outline the specific challenges or issues that arose during the project.
+   - Use objective language to describe the difficulties without assigning blame.
+
+3. **Your Role and Actions:**
+   - Clearly define your role in the project and your responsibilities.
+   - Explain the actions you took to address the challenges.
+   - Highlight any proactive measures you implemented to mitigate potential issues.
+
+4. **Communication and Collaboration:**
+   - Discuss how you communicated with the client during challenging times.
+   - Emphasize any collaborative efforts made to find solutions.
+   - Mention how you maintained transparency and managed expectations.
+
+5. **Problem Resolution:**
+   - Share the steps taken to resolve the difficulties.
+   - Highlight any innovative or creative solutions implemented.
+   - If applicable, discuss how you worked with the team to overcome obstacles.
+
+6. **Lesson Learned:**
+   - Reflect on the experience and articulate the lessons learned.
+   - Explain how the experience contributed to your professional growth.
+   - Mention any adjustments made in your approach to prevent similar issues in the future.
+
+7. **Positive Outcome:**
+   - If applicable, discuss the positive outcomes resulting from the resolution.
+   - Mention any client satisfaction, improved relationships, or project successes.
+
+8. **Client Relationship Building:**
+   - Discuss how the experience influenced your approach to client relationships.
+   - Emphasize your commitment to client satisfaction and the importance of effective communication.
+
+Remember to maintain a professional and constructive tone throughout the discussion. Focus on your problem-solving skills, resilience, and ability to learn from challenges. This approach demonstrates your capacity to handle difficulties while highlighting your commitment to continuous improvement in a professional setting.
+
+Q. how will you design a system to collect data from IoT devices.
+
+Principal Engineer Interview
+
+Why do you want to work for our company?
+
+Real time use of stack data structure ?
+
+
+
